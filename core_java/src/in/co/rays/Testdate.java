@@ -9,6 +9,7 @@ public class Testdate {
 	Date d= new Date();
 	System.out.println("Date :" + d);
 
+
 	}
 
 }

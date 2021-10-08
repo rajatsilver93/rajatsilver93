@@ -18,7 +18,7 @@ public class Array {
 				for(int a : table)
 					
 				System.out.println(a);
-				System.out.println("the lenght of table is ->"  +  tablelenght);
+				
 				
 	}
 
