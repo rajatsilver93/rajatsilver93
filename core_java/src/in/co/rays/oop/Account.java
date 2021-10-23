@@ -1,5 +1,7 @@
 package in.co.rays.oop;
 
+import in.co.rays.oop.ExceptionHandling.InsufficientFund;
+
 public class Account extends TestAccount {
 
 private String number;
@@ -28,9 +30,16 @@ public void deposit(double d) {
 	balance=balance+d;
 	System.out.println("Deposit +"+ d);
 }
-public void withdraw(double w) {
+public void withdraw(double w) throws InsufficientFund {
 	balance=balance-w;
+	if (balance<500) {
+	InsufficientFund e = new InsufficientFund();
+	throw e;
+	
+	
+	}
 	System.out.println("Withdraw -"+ w);
+	
 }
 public void fundTransfer(double f) {
 	balance=balance-f;
